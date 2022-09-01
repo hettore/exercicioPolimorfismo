@@ -6,7 +6,7 @@ import java.util.Date;
 public class UsedProduct extends Product {
 
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-	
+
 	private Date manufactureDate;
 
 	public UsedProduct() {
@@ -25,10 +25,11 @@ public class UsedProduct extends Product {
 	public void setManufactureDate(Date manufactureDate) {
 		this.manufactureDate = manufactureDate;
 	}
-	
+
 	@Override
 	public String priceTag() {
-		return getName() + " (used) $ " + String.format("%.2f", getPrice()) + " Manufacture date: " + sdf.format(manufactureDate) + ")";
+		return getName() + " (used) $ " + String.format("%.2f", getPrice()) + " Manufacture date: "
+				+ sdf.format(manufactureDate) + ")";
 	}
-	
+
 }
